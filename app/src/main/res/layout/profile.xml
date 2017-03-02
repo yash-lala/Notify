@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+    android:id="@+id/profile"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_gravity="center"
+    android:background="@color/SilverSilverSilver" android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/GeelaNeela"
+            />
+
+        <TextView
+            android:id="@+id/profile_username"
+            android:layout_below="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/GeelaNeela"
+
+            />
+
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/profile_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/GeelaNeela"
+
+            />
+
+        <TextView
+            android:id="@+id/uselesstext"
+            android:layout_below="@+id/profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="With us Since :)"
+            android:textColor="@color/GeelaNeela"
+            />
+        <TextView
+            android:id="@+id/profile_date"
+            android:layout_below="@+id/uselesstext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/GeelaNeela"
+
+            />
+
+        <Button
+            android:id="@+id/profile_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_date"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/logout"
+            android:background="@color/GeelaNeela"
+            android:textColor="@color/SilverSilverSilver"
+            />
+
+
+        </RelativeLayout>

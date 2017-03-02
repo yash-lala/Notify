@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="GeelaNeela">#072b56</color>
+    <color name="SilverSilverSilver">#c0c0c0</color>
+    <color name="GheeraSilver">#616161</color>
+    <color name="SexyBlue">#03A9F4</color>
+    <color name="MasstGrey">#3d3d3d</color>
+    <color name="JyaadaGrey">#2e2e2e</color>
+    <color name="KalaNotSoKhata">#000</color>
+    <color name="KaafiSafeed">#fff</color>
+    <color name="RaseelaLaal">#ff2800</color>
+    <color name="JakasCyan">#FF85DFEC</color>
+
+
+
+
+
+
+    //background colors for intro screen(4 slides)
+    <color name="bg_1">#3395ff</color>
+    <color name="bg_2">#20d2bb</color>
+    <color name="bg_3">#f64c73</color>
+    <color name="bg_4">#c873f4</color>
+    //dots active colors(4 types)
+    <color name="bg_1_active">#93c6fd</color>
+    <color name="bg_2_active">#8cf9eb</color>
+    <color name="bg_3_active">#f98da5</color>
+    <color name="bg_4_active">#e4b5fc</color>
+    //dots inactive colors(4 types)
+    <color name="bg_1_inactive">#2278d4</color>
+    <color name="bg_2_inactive">#14a895</color>
+    <color name="bg_3_inactive">#d1395c</color>
+    <color name="bg_4_inactive">#a854d4</color>
+
+    //placing it in a array to call from activity
+    <array name="active">
+        <item>@color/bg_1_active</item>
+        <item>@color/bg_2_active</item>
+        <item>@color/bg_3_active</item>
+        <item>@color/bg_4_active</item>
+    </array>
+    <array name="inactive">
+        <item>@color/bg_1_inactive</item>
+        <item>@color/bg_2_inactive</item>
+        <item>@color/bg_3_inactive</item>
+        <item>@color/bg_4_inactive</item>
+    </array>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/sendmessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:padding="8dp"
+    android:background="@color/SilverSilverSilver">
+
+
+    <ImageView
+        android:id="@+id/sucess"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/success"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/uselessid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/message"
+        android:inputType="text"
+        android:maxLength="20"
+        android:textSize="20sp"
+        />
+
+        <Button
+            android:id="@+id/sendmessage_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_message"
+            android:background="@color/GeelaNeela"
+            android:textColor="@color/SilverSilverSilver"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+</RelativeLayout>

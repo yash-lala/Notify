@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "330078285164",
+    "firebase_url": "https://notify-f2365.firebaseio.com",
+    "project_id": "notify-f2365",
+    "storage_bucket": "notify-f2365.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330078285164:android:c5476fa6882cdd42",
+        "android_client_info": {
+          "package_name": "com.example.alienware.notify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330078285164-fiu5g69t01o0h9brdujb83ddd6u6204d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWjC-51Z01KWz1DU6J0gtI3w8K20llAqM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

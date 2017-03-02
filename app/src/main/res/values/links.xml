@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [
+    <!ENTITY ip "http://192.168.1.109/notify/">
+    ]>
+
+<resources>
+
+    <string name="link_login">&ip;Login.php</string>
+    <string name="link_signUp">&ip;Register.php</string>
+    <string name="link_logOut">&ip;Logout.php</string>
+    <string name="link_allUsers">&ip;AllUsers.php</string>
+    <string name="link_allGroups">&ip;AllGroups.php</string>
+    <string name="link_sendMessage">&ip;SendMessage.php</string>
+    <string name="link_createGroup">&ip;CreateGroup.php</string>
+    <string name="link_allNotifications">&ip;AllNotifications.php</string>
+</resources>

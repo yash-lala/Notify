@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/homepage_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/GeelaNeela">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/homepage_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/GeelaNeela"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/SilverSilverSilver"
+            />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/homepage_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/SexyBlue"
+            app:tabTextColor="@color/GheeraSilver"
+            app:tabSelectedTextColor="@color/SilverSilverSilver"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/appBar"
+        android:id="@+id/homepage_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
+ </android.support.design.widget.CoordinatorLayout>
