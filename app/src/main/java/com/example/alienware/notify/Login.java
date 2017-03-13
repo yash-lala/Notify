@@ -73,7 +73,6 @@ public class Login extends Fragment implements View.OnTouchListener{
                     case R.id.login:
                         if(houseKeeping.areFieldsEmpty(user_name, password)) {
                             Snackbar.make(coordinatorLayout,"Fill The Fields You Muppet!", Snackbar.LENGTH_SHORT).show();
-                            //Toast.makeText(getContext(), "Fill the fields you Muppet!", Toast.LENGTH_SHORT).show();
                             return true;
                         }
                         else {

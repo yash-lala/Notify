@@ -66,7 +66,7 @@ public class Homepage extends Fragment implements Toolbar.OnMenuItemClickListene
     }
 
     void setViewPager(ViewPager viewPager){
-        ThePager thePager = new ThePager(getFragmentManager());
+        ThePager thePager = new ThePager(getChildFragmentManager());
         thePager.addFragment(allGroups,"Groups");
         thePager.addFragment(notifications,"Notifications");
         viewPager.setAdapter(thePager);

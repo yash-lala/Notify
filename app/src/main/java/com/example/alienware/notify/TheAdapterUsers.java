@@ -40,7 +40,7 @@ public class TheAdapterUsers extends RecyclerView.Adapter<TheAdapterUsers.TheVie
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
                     switch (motionEvent.getAction()) {
-                        case MotionEvent.ACTION_DOWN:
+                        case MotionEvent.ACTION_UP:
                             try {
                                 String buffer = userList.get(getAdapterPosition()).getString("user_name");
                                 if(vector.contains(buffer)){
@@ -58,7 +58,7 @@ public class TheAdapterUsers extends RecyclerView.Adapter<TheAdapterUsers.TheVie
                                 je.printStackTrace();
                             }
                             return true;
-                        case MotionEvent.ACTION_UP:
+                        case MotionEvent.ACTION_DOWN:
                             return true;
                     }
                     return true;

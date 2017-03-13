@@ -2,13 +2,13 @@ package com.example.alienware.notify;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +30,7 @@ public class CreateGroup extends Fragment {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
-    JSONObject jsonObject;
+    JSONObject jsonObject,recieveAllusers;
     TheSessionKeeper theSessionKeeper;
     FloatingActionButton creategroup;
     EditText groupName;
@@ -40,6 +40,24 @@ public class CreateGroup extends Fragment {
 
 
     List<JSONObject> jsonObjectList = new ArrayList<>();
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if(keyEvent.getAction()== KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK){
+                    changeFrag.bringChange(homepage);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+    }
 
     @Override
     public void onAttach(Context context) {
@@ -61,7 +79,13 @@ public class CreateGroup extends Fragment {
         adapter = new TheAdapterUsers(jsonObjectList);
         recyclerView.setAdapter(adapter);
         jsonObject = new JSONObject();
-        new AsyncConnect(getContext(),getString(R.string.link_allUsers), null, new AsyncConnect.AsyncRevert() {
+        recieveAllusers = new JSONObject();
+        try {
+            recieveAllusers.put("uid",theSessionKeeper.get("uid"));
+            System.out.println("RECIEVE ALL ON UID"+recieveAllusers);
+        }catch(JSONException je){je.printStackTrace();}
+
+        new AsyncConnect(getContext(),getString(R.string.link_allUsers), recieveAllusers, new AsyncConnect.AsyncRevert() {
             @Override
             public void getJsonResponse(JSONObject jsonObject) {
                 try {

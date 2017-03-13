@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONStringer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,7 +30,7 @@ public class Notifications extends Fragment {
     RecyclerView.Adapter adapter;
     JSONObject jsonObject;
     TheSessionKeeper theSessionKeeper;
-    List<JSONObject> jsonObjectList;
+    List<JSONObject> jsonObjectList =  new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,16 +51,21 @@ public class Notifications extends Fragment {
             @Override
             public void getJsonResponse(JSONObject jsonObject) {
                 try {
-                    JSONArray jsonArray = new JSONArray(jsonObject.getJSONArray("list"));
-
-                    for (int i =0;i<jsonArray.length();i++){
-                        jsonObjectList.add(jsonArray.getJSONObject(i));
-                    }
-                    if(jsonObjectList.size()==0){
+                    if(jsonObject!=null){
+                        noData.setVisibility(TextView.INVISIBLE);
+                        recyclerView.setVisibility(RecyclerView.VISIBLE);
+                            JSONArray jsonArray = new JSONArray(jsonObject.getString("list"));
+                            System.out.println("JSON ARRAY ->" + jsonArray);
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                jsonObjectList.add(jsonArray.getJSONObject(i));
+                                System.out.println(jsonObjectList.get(i));
+                            }
+                            adapter.notifyDataSetChanged();
+                        }
+                    else {
                         noData.setVisibility(TextView.VISIBLE);
                         recyclerView.setVisibility(RecyclerView.INVISIBLE);
-                    }else
-                    adapter.notifyDataSetChanged();
+                    }
                 }catch (JSONException je){je.printStackTrace();}
             }
         }).execute();
